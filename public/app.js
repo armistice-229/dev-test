@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api/auth";
+const API_URL = "https://dev-test-1-fnx1.onrender.com/api/auth";
 
 async function login() {
     const email = document.getElementById("email").value;
