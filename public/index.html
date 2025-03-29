@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentification</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+
+    <div class="w-full max-w-md bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-center text-2xl font-bold mb-4">Connexion</h2>
+        
+        <div id="message" class="text-center text-red-500 mb-4"></div>
+
+        <input type="email" id="email" placeholder="Email" class="w-full p-2 border rounded mb-2">
+        <input type="password" id="password" placeholder="Mot de passe" class="w-full p-2 border rounded mb-2">
+
+        <button onclick="login()" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Se connecter</button>
+
+        <p class="text-center mt-4 text-sm">
+            Pas encore inscrit ? <a href="#" onclick="showRegister()" class="text-blue-500">Créer un compte</a>
+        </p>
+    </div>
+
+    <div id="registerForm" class="hidden w-full max-w-md bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-center text-2xl font-bold mb-4">Inscription</h2>
+    
+        <div id="registerMessage" class="text-center text-red-500 mb-4"></div>
+    
+        <input type="text" id="name" placeholder="Nom" class="w-full p-2 border rounded mb-2">
+        <input type="email" id="registerEmail" placeholder="Email" class="w-full p-2 border rounded mb-2">
+        <input type="password" id="registerPassword" placeholder="Mot de passe" class="w-full p-2 border rounded mb-2">
+    
+        <button onclick="register()" class="w-full bg-green-500 text-white p-2 rounded hover:bg-green-600">S'inscrire</button>
+    
+        <p class="text-center mt-4 text-sm">
+            Déjà inscrit ? <a href="#" onclick="showLogin()" class="text-blue-500">Se connecter</a>
+        </p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
